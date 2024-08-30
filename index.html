@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .main{
+            display:grid;
+            margin-top:25vh;
+            gap:3vh;
+            justify-content:center;
+        }
+        /* line 1 */
+    .container{
+        display: flex;
+        gap:10px;  
+    }
+    .dot1{
+        animation-delay: 0.1s;
+    }
+    .dot2{
+        animation-delay: 0.3s;
+    }
+    .dot3{
+        animation-delay: 0.5s;
+    }
+    .circle{
+       border:2 solid;
+       border-radius: 50%;
+       background-color: rgb(221, 69, 35);
+       width: 20px;
+       height:20px; 
+       animation-name: translate;
+        animation-iteration-count: infinite;
+        animation-duration: 1s;
+    }
+    /* line 2 */
+    .dot{
+        margin-top: 5%;
+        animation-name:scaling;
+        animation-iteration-count: infinite;
+        animation-duration: 1s;
+        background-color: rgb(106, 190, 198);
+        width: 10px;
+        height:10px;
+        border-radius: 50%;
+    }
+    .container1{
+        display: flex;
+        gap:5px;
+        justify-content: center;
+    }
+    .circle1{
+       animation-delay: 0.1s;
+    }
+    .circle2{
+       animation-delay: 0.3s;
+    }
+    .circle3{
+       animation-delay: 0.5s;
+    }
+    @keyframes scaling {
+        from{
+            transform:scale(1,1);
+            background-color:rgb(118, 211, 211);
+        }
+        to{
+            transform: scale(1.5,1.5);
+            background-color:rgb(5, 73, 79) ;
+        }
+}
+@keyframes translate {
+        0%{
+            transform:translateY(0px);
+            
+        }
+        50%{
+            transform: translateY(-90px);
+            
+        }
+}
+    </style>
+</head>
+<body>
+    <div class="main">
+    <div class="container">
+        <div class="circle dot1"></div><br>
+        <div class="circle dot2"></div><br>
+        <div class="circle dot3"></div><br>
+        </div>
+    <div class="container1">
+        <div class="dot circle1"></div><br>
+        <div class="dot circle2"></div><br>
+        <div class="dot circle3"></div><br>
+    </div>  
+    </div>
+</body>
+</html>
